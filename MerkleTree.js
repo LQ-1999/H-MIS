@@ -1,8 +1,8 @@
 const SHA256 = require('crypto-js/sha256')
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
-const depth = 3
-const TxNum = 4
+const depth = 8
+const TxNum = 8
 
 class User {
     constructor(username, identityIdentifier, registerTime, expiredTime) {
@@ -290,6 +290,7 @@ class MerkleTree {
             str = str + res[i] + ' '
         }
 
+        console.log(str)
         return str
     }
 }
@@ -297,11 +298,15 @@ class MerkleTree {
 tree = new MerkleTree()
 tree.insert([1,1,1,1,1,1,1,1])
 tree.insert([2,2,2,2,2,2,2,2])
+tree.insert([2,2,2,2,2,2,2,2])
+tree.insert([2,2,2,2,2,2,2,2])
+tree.insert([2,2,2,2,2,2,2,2])
+tree.insert([2,2,2,2,2,2,2,2])
+tree.insert([2,2,2,2,2,2,2,2])
+tree.insert([2,2,2,2,2,2,2,2])
 // tree.update([2,2,2,2,2,2,2,2], 0)
 // tree.delete(0)
 
 
 // tree.printTree()
-tree.printTxs()
-console.log(tree.getProof())
 

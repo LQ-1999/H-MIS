@@ -1,8 +1,8 @@
 import "hashes/pedersen/512bit" as hash;
 import "hashes/utils/256bitsDirectionHelper" as multiplex;
 
-const u32 DEPTH = 2;
-const u32 round = 2;
+const u32 DEPTH = 7;
+const u32 round = 8;
 const u32 round1 = round + 1;
 
 // Merke-Tree inclusion proof for tree depth 4 using sha256
